@@ -1,0 +1,11 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	{% if teddys %}
+		<ul>
+			{% for teddy in teddys %}
+				<li><a href="/teddys/{{ teddy.id }}/">{{ teddy.name }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+{% endblock %}
