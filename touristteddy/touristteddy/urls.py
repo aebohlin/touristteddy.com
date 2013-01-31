@@ -1,4 +1,5 @@
 from django.conf.urls import patterns, include, url
+from django.contrib.staticfiles.urls import staticfiles_urlpatterns
 
 from touristteddy import views
 # Uncomment the next two lines to enable the admin:
@@ -19,3 +20,5 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^teddys/', include('teddys.urls')),
 )
+
+urlpatterns += staticfiles_urlpatterns()
