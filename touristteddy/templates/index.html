@@ -2,27 +2,28 @@
 
 {% block content %}
 	{% if teddys %}
-		<h2>Teddys</h2>
-		<img src="{{ STATIC_URL }}images/code_monkey.png" alt="the code monkey" />
-		<ul>
-			{% for teddy in teddys %}
-				<li>
-					<h3><a href="/teddys/{{ teddy.id }}/">{{ teddy.name }}</a></h3>
-					<ul>
-						{% for post in teddy.post_set.all %}
-							<li><a href="/teddys/{{ teddy.id }}/posts/{{ post.id }}/">{{ post.title }}</a></li>
-						{% endfor %}
-					</ul>
-				</li>
-			{% endfor %}
-		</ul>
-	{% endif %}
-	{% if posts %}
-		<h2>Latest posts</h2>
-		<ul>
+		<!-- <div class="grid_12">
+			<h2>Teddys</h2>
+		</div>
+
+		-->
+		<div class="grid_12 fpteddy">
+				<h3>Latest travels!</h3>
+			</div>
+			<!--<div class="grid_12 fpteddy">
+				<h3><a href="/teddys/{{ teddy.id }}/">{{ teddy.name }}</a></h3>
+			</div>-->
 			{% for post in posts %}
-				<li><a href="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}">{{ post.title }}</a></li>
+				<div class="grid_4">
+					<div class="fppost"><a href="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/">
+						<img src="{{ post.picture.url }}" alt="{{ post.title }}" />						
+						<h4>{{ post.title }}</h4></a>
+					</div>
+				</div>
+				{% if forloop.counter|divisibleby:3 or forloop.counter == posts.count %}
+					<div class="clear"></div>
+				{% endif %}
 			{% endfor %}
-		</ul>
+		<!--	-->
 	{% endif %}
 {% endblock content %}

@@ -11,7 +11,7 @@ class Teddy(models.Model):
 class Post(models.Model):
 	title = models.CharField(max_length=200)
 	description = models.TextField()
-	picture = models.ImageField(upload_to='/posts', max_length=100)
+	picture = models.ImageField(upload_to='posts', max_length=100)
 	latitude = models.DecimalField(max_digits=9, decimal_places=6)
 	longitude = models.DecimalField(max_digits=9, decimal_places=6)
 	teddy = models.ForeignKey(Teddy)
