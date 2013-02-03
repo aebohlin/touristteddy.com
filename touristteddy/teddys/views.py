@@ -23,3 +23,5 @@ def teddy_posts(request, teddy_id):
 def teddy_post(request, teddy_id, post_id):
 	teddy = get_object_or_404(Teddy, pk=teddy_id)
 	return render(request, 'teddys/teddy_posts.html', {'teddy_posts': teddy.post_set.all() })
+
+

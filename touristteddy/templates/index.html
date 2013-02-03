@@ -1,7 +1,7 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-	{% if teddys %}
+	{% if posts %}
 		<!-- <div class="grid_12">
 			<h2>Teddys</h2>
 		</div>
@@ -26,4 +26,7 @@
 			{% endfor %}
 		<!--	-->
 	{% endif %}
+
+		<div class="grid_12 fpteddy">
+	<a href="{% url touristteddy.views.login_user %}?next={{request.path}}">Login</a></div>
 {% endblock content %}
