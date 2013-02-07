@@ -21,12 +21,12 @@ def index(request):
 	#	})))
 
 def login_user(request):
-    redirect_to = request.REQUEST.get('next', '')
     state = "Please log in below..."
     username = password = ''
     if request.POST:
         username = request.POST.get('username')
         password = request.POST.get('password')
+        redirect_to = request.POST.get('next', '')
 		
         user = authenticate(username=username, password=password)
         if user is not None:
@@ -40,4 +40,4 @@ def login_user(request):
         else:
             state = "Your username and/or password were incorrect."
 
-    return render_to_response('auth.html',{'state':state, 'username': username}, context_instance=RequestContext(request))
+    return render_to_response('auth.html',{'state':state, 'username': username, 'next': request.REQUEST.get('next', '')}, context_instance=RequestContext(request))

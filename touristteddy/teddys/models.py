@@ -17,6 +17,14 @@ class Post(models.Model):
 	teddy = models.ForeignKey(Teddy)
 	user = models.ForeignKey(User)
 
-
 	def __unicode__(self):
 		return self.title
+
+class Comment(models.Model):
+	comment = models.TextField()
+	comment_time = models.DateTimeField()
+	user = models.ForeignKey(User)
+	post = models.ForeignKey(Post)
+
+	def __unicode__(self):
+		return self.comment
