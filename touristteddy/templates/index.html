@@ -12,12 +12,25 @@
 			</div>
 			<!--<div class="grid_12 fpteddy">
 				<h3><a href="/teddys/{{ teddy.id }}/">{{ teddy.name }}</a></h3>
+				href="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/"
 			</div>-->
 			{% for post in posts %}
 				<div class="grid_4">
-					<div class="fppost"><a href="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/">
-						<img src="{{ post.picture.url }}" alt="{{ post.title }}" />						
-						<h4>{{ post.title }}</h4></a>
+					<div class="fppost">
+						<a class="open-fancy" href="#{{ post.id }}">
+							<img src="{{ post.picture.url }}" alt="{{ post.title }}" />						
+							<h4>{{ post.title }}</h4>
+						</a>
+						<div id="{{ post.id }}" class="fancy">
+							<div class="container_12 fancy-content">
+								<div class="grid_9">
+									<img src="{{ post.picture.url }}" alt="{{ post.title }}" />	
+								</div>
+								<div class="grid_3 comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json">
+									
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 				{% if forloop.counter|divisibleby:3 or forloop.counter == posts.count %}
