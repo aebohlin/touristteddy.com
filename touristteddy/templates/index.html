@@ -26,8 +26,17 @@
 								<div class="grid_9">
 									<img src="{{ post.picture.url }}" alt="{{ post.title }}" />	
 								</div>
-								<div class="grid_3 comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json">
-									
+								<div class="grid_3">
+									<div class="comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>
+									<div id="comment-form">
+										{% if request.user.is_authenticated %}
+											{% csrf_token %}
+											{{ username }}: 
+											<input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />
+										{% else %}
+											Please <a href="{% url touristteddy.views.login_user %}?next={{request.path}}">log in</a> to post comments
+										{% endif %}
+									</div>
 								</div>
 							</div>
 						</div>

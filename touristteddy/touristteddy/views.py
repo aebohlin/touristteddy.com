@@ -5,6 +5,7 @@ from django.shortcuts import render_to_response, get_object_or_404
 from django.contrib.auth import authenticate, login
 from django.core import serializers
 from django.contrib.auth.models import User
+from touristteddy import utils
 
 def index(request):
 	teddys = Teddy.objects.all()
@@ -16,6 +17,7 @@ def index(request):
 	return HttpResponse(template.render(RequestContext(request, {
 		'teddys': teddys,
 		'posts': posts,
+        'username': utils.get_username_or_fullname(request.user)
 		})))
 	#return HttpResponse(template.render(Context({
 	#	'teddys': teddys,
@@ -40,7 +42,7 @@ def login_user(request):
             else:
                 state = "Your account is not active, please contact the site admin."
         else:
-            state = "Your username and/or password were incorrect."
+            state = "Incorrent username and/or password."
 
     return render_to_response('auth.html',{'state':state, 'username': username, 'next': request.REQUEST.get('next', '')}, context_instance=RequestContext(request))
 

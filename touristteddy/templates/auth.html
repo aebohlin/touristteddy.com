@@ -18,6 +18,9 @@
 			{% if next %}
 			<input type="hidden" name="next" value="{{ next }}" />
 			{% endif %}
+		    <p class="field info">
+				{{ state }}
+		    </p>
 		    <p class="field">
 		        <input type="text" name="username" placeholder="Username or email">
 		        <i class="icon-user icon-large"></i>

@@ -22,7 +22,8 @@ a:hover { text-decoration: underline;}
 	background-repeat:repeat;*/
 	background-color: rgba(21,20,20,0.3);
 }
-#header h1 { color: #f3f3f3; font-size: 72px; font-family: 'Finger Paint', cursive;}
+#header h1 a { color: #f3f3f3; font-size: 72px; font-family: 'Finger Paint', cursive;}
+#header h1 a:hover { text-decoration: none;}
 #header h1 img { margin-left: 30px;} 
 
 .topmenu { background-color: rgba(21,20,20,0.3); padding: 5px 0px; text-align: left;}
@@ -42,10 +43,14 @@ box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
 .fancy .fancy-content {  width: 960px; }
 .fancy .fancy-content img {  width: 100%; }
 
-.fancy .fancy-content .comment {  margin-bottom: 5px;  }
+.fancy .fancy-content .comments {  height: 435px; overflow:auto;margin-bottom: 10px; width: 230px;}
+.fancy .fancy-content .comment {  margin-bottom: 5px; }
 .fancy .fancy-content .comment .text {    }
 .fancy .fancy-content .comment .datetime {  color:#888;font-size: 12px;padding-bottom: 10px; display: block;border-bottom:1px solid #eee;}
 .fancy .fancy-content .comment a {  font-size: 12px; font-weight: bold;}
+.fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal;}
+.fancy .fancy-content #comment-form a {  font-size: 12px; font-weight: bold;}
+.fancy .fancy-content #comment-form input {  width: 190px;}
 
 .content { padding-bottom: 50px; } 
 .login { margin-top: 20px;padding: 10px; }
@@ -123,6 +128,7 @@ box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
     transition: all 0.3s ease-out;
     pointer-events: none;
 }
+.form-1 .field.info { padding-bottom: 5px; color: #777777;}
 
 .form-1 input[type=text],
 .form-1 input[type=password] {
