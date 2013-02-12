@@ -22,6 +22,7 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     url(r'^teddys/', include('teddys.urls')),
     url(r'^login/$', 'touristteddy.views.login_user'),
+    url(r'^newuser/$', 'touristteddy.views.new_user'),
     url(r'^users/(?P<user_id>\d+)/json/$', 'touristteddy.views.get_user_as_json'),
 )
 

@@ -24,6 +24,11 @@ $(document).ready(function () {
 			$(this).trigger("enterKey");
 		}
 	});
+
+	$("#showCreateForm").click(function (e) {
+		e.preventDefault();
+		$(".form-1.create").show();
+	});
 });
 
 touristteddy = {}

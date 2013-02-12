@@ -1,0 +1,44 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+	<div class="grid_12 login">
+		<form class="form-1 newuser" action="/newuser/" method="post">{% csrf_token %}
+			{% if next %}
+				<input type="hidden" name="next" value="{{ next }}" />
+			{% endif %}
+		    <p class="field info">
+				{{ state }}
+		    </p>
+		    <p class="field">
+		        <input type="text" name="username" placeholder="Username" value="{{ username }}">
+		        <i class="icon-user icon-large"></i>
+		    </p>
+	        <p class="field">
+		        <input type="password" name="password" placeholder="Password">
+		        <i class="icon-lock icon-large"></i>
+		    </p>  		    
+	        <p class="field">
+		        <input type="password" name="password_again" placeholder="Password again">
+		        <i class="icon-lock icon-large"></i>
+		    </p>    
+		    <p class="field">
+		        <input type="text" name="first_name" placeholder="First name" value="{{ first_name }}">
+		        <i class="icon-user icon-large"></i>
+		    </p>
+		    <p class="field">
+		        <input type="text" name="last_name" placeholder="Last name" value="{{ last_name }}">
+		        <i class="icon-user icon-large"></i>
+		    </p>
+		    <p class="field">
+		        <input type="text" name="email" placeholder="Email" value="{{ email }}">
+		        <i class="icon-user icon-large"></i>
+		    </p>    
+		    <p class="submit">
+		        <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+		    </p>
+	      	<p class="field info">
+				Already have a user? <a href="{% url touristteddy.views.login_user %}?next={{ next }}">Login.</a>
+		    </p>
+		</form>
+	</div>
+{% endblock content %}

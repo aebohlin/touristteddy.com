@@ -1,5 +1,7 @@
 import datetime
 from django.utils import timezone
+from django.core.validators import validate_email
+from django.core.exceptions import ValidationError
 
 def get_username_or_fullname(user):
 	# trys to get users fullname, returns username if fullname is empty
@@ -40,3 +42,10 @@ def get_friendly_time(time):
 			friendly_time += " days ago"
 
 	return friendly_time
+
+def validate_email_address(email):
+    try:
+        validate_email(email)
+        return True
+    except ValidationError:
+        return False

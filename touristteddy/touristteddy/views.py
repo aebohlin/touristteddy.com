@@ -46,6 +46,50 @@ def login_user(request):
 
     return render_to_response('auth.html',{'state':state, 'username': username, 'next': request.REQUEST.get('next', '')}, context_instance=RequestContext(request))
 
+def new_user(request):
+    state = "Fill out the form below..."
+    username = password = password_again = first_name = last_name = email = ''
+    if request.POST:
+        username = request.POST.get('username')
+        password = request.POST.get('password')
+        password_again = request.POST.get('password_again')
+        first_name = request.POST.get('first_name')
+        last_name = request.POST.get('last_name')
+        email = request.POST.get('email')
+        redirect_to = request.POST.get('next', '')
+        
+        user = User()
+
+        if username == '':
+            state = 'Please fill out username'
+        elif password == '':
+            state = 'Please fill out password'
+        elif password != password_again:
+            state = 'Passwords do not match'
+        elif utils.validate_email_address(email) == False:
+            state = 'Email is not valid'
+        else: 
+            user.username = username
+            user.set_password(password)
+            user.first_name = first_name
+            user.last_name = last_name
+            user.email = email
+            user.save()
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            index(request)
+            state = "User created!"
+            return HttpResponseRedirect(redirect_to)  
+
+    return render_to_response('newuser.html',{
+        'state':state, 
+        'username': username, 
+        'first_name': first_name, 
+        'last_name': last_name, 
+        'email': email, 
+        'next': request.REQUEST.get('next', '')
+    }, context_instance=RequestContext(request))
+
 
 def get_user_as_json(request, user_id):
     user = get_object_or_404(User, pk=user_id)

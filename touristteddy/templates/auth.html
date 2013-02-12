@@ -2,27 +2,15 @@
 
 {% block content %}
 	<div class="grid_12 login">
-		<!-- <form action="/login/" method="post">{% csrf_token %}
-			{% if next %}
-			<input type="hidden" name="next" value="{{ next }}" />
-			{% endif %}
-			username:
-			<input type="text" name="username" value="{{ username}}" /><br />
-			password:
-			<input type="password" name="password" value="" /><br />
-
-			<input type="submit" value="Log In" />
-		</form>-->
-
 		<form class="form-1" action="/login/" method="post">{% csrf_token %}
 			{% if next %}
-			<input type="hidden" name="next" value="{{ next }}" />
+				<input type="hidden" name="next" value="{{ next }}" />
 			{% endif %}
 		    <p class="field info">
 				{{ state }}
 		    </p>
 		    <p class="field">
-		        <input type="text" name="username" placeholder="Username or email">
+		        <input type="text" name="username" placeholder="Username">
 		        <i class="icon-user icon-large"></i>
 		    </p>
 		        <p class="field">
@@ -31,6 +19,9 @@
 		    </p>        
 		    <p class="submit">
 		        <button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
+		    </p>
+	      	<p class="field info">
+				Don't have a user? <a href="{% url touristteddy.views.new_user %}?next={{ next }}">Create one.</a>
 		    </p>
 		</form>
 	</div>
