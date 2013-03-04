@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^login/$', 'touristteddy.views.login_user'),
     url(r'^newuser/$', 'touristteddy.views.new_user'),
     url(r'^users/(?P<user_id>\d+)/json/$', 'touristteddy.views.get_user_as_json'),
+    url(r'^create_post/$', 'teddys.views.create_post'),
 )
 
 urlpatterns += staticfiles_urlpatterns()

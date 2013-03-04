@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.template import Context, loader, RequestContext
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render_to_response, render, get_object_or_404
 from django.core import serializers
 from django.utils import simplejson
 from touristteddy import utils
@@ -52,3 +52,11 @@ def post_comment(request, teddy_id, post_id):
 		success = True
 	return HttpResponse(simplejson.dumps(success), mimetype='application/json')
 
+def create_post(request):
+	title = ''
+	if request.POST:
+		title = request.POST.get('title')	
+
+	return render_to_response('teddys/create_post.html', {
+		'title': title
+	}, context_instance=RequestContext(request))
