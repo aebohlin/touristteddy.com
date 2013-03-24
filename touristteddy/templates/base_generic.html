@@ -31,7 +31,8 @@
 		<div class="grid_12 topmenu">
 			<a href="/Teddys">Teddys</a>
 			<a href="/About">About</a>
-			<a class="right" href="{% url touristteddy.views.login_user %}?next={{request.path}}">Login</a>
+			<a class="right" href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">Login</a>
+			<a class="right" href="{% url "teddys.views.create_post" %}">New post</a>
 			<div class="clear"></div>
 		</div>
 		{% block content %}

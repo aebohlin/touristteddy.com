@@ -34,7 +34,7 @@
 											{{ username }}: 
 											<input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />
 										{% else %}
-											Please <a href="{% url touristteddy.views.login_user %}?next={{request.path}}">log in</a> to post comments
+											Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
 										{% endif %}
 									</div>
 								</div>

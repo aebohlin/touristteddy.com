@@ -53,10 +53,32 @@ def post_comment(request, teddy_id, post_id):
 	return HttpResponse(simplejson.dumps(success), mimetype='application/json')
 
 def create_post(request):
-	title = ''
-	if request.POST:
-		title = request.POST.get('title')	
-
-	return render_to_response('teddys/create_post.html', {
-		'title': title
+    title = ''
+    description = ''
+    picture = ''
+    lat = ''
+    lng = ''
+    teddy_id = ''
+    if request.POST and request.user.is_authenticated():
+        title = request.POST.get('title')	
+        description = request.POST.get('description')
+        picture = request.FILES['picture']
+        #for filename, file in request.FILES.iteritems():
+        #        picture = request.FILES[filename]
+        #picture_path = request.POST.get('picture')
+        utils.handle_uploaded_file(picture)
+        lat = request.POST.get('lat')
+        lng = request.POST.get('lng')
+        teddy_id = request.POST.get('teddy_id')
+        teddy = get_object_or_404(Teddy, pk=teddy_id)
+        post = Post(title = title, description = description, picture = picture, latitude = lat, longitude = lng, teddy = teddy, user = request.user)
+        post.save()
+    return render_to_response('teddys/create_post.html', {
+		'title': title,
+		'description': description,
+		'picture': picture,
+		'lat': lat,
+		'lng': lng,
+		'teddy_id': teddy_id
 	}, context_instance=RequestContext(request))
+    

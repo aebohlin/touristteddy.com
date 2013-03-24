@@ -3,24 +3,24 @@
 {% block content %}
     <div class="grid_12">
 	add new post
-	<form class="form-1" action="/create_post/" method="post">{% csrf_token %}
+	<form class="form-1" action="/create_post/" method="post" enctype="multipart/form-data">{% csrf_token %}
 		<p class="field">
 			<input type="text" name="title" placeholder="Title" value="{{ title }}"/>
 		</p>
 		<p class="field">
-			<textarea name="description" placeholder="Description" value="{{ description }}"/>
+			<textarea name="description" placeholder="Description">{{ description }}</textarea>
 		</p>
 		<p class="field">
-			<input type="text" name="picture" placeholder="Picture" value="{{ picture }}"/>
+			<input type="file" name="picture" placeholder="Picture" value="{{ picture }}"/>
 		</p>
 		<p class="field">
 			<input type="text" name="lat" placeholder="Latitude" value="{{ lat }}"/>
 		</p>
 		<p class="field">
-			<input type="text" name="long" placeholder="Longitude" value="{{ long }}"/>
+			<input type="text" name="lng" placeholder="Longitude" value="{{ lng }}"/>
 		</p>
 		<p class="field">
-			<input type="text" name="teddy" placeholder="Teddy" value="{{ teddy }}"/>
+			<input type="text" name="teddy_id" placeholder="Teddy" value="{{ teddy }}"/>
 		</p>
 		<p class="submit">
 			<button type="submit" name="submit"><i class="icon-arrow-right icon-large"></i></button>
