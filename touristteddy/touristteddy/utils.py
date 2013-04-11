@@ -55,10 +55,12 @@ def handle_uploaded_file(f):
     with open('/tmp/' + f.name, 'wb+') as destination:
         for chunk in f.chunks():
             destination.write(chunk)
+
+
 def rescale(data, width, height, force=True):
     """Rescale the given image, optionally cropping it to make sure the result image has the specified width and height."""
     from cStringIO import StringIO
-
+    import Image as pil
     max_width = width
     max_height = height
 
@@ -84,8 +86,8 @@ def rescale(data, width, height, force=True):
             x_offset = 0
             y_offset = float(src_height - crop_height) / 3
             
-        img = img.crop((x_offset, y_offset, x_offset+int(crop_width), y_offset+int(crop_height)))
-        img = img.resize((dst_width, dst_height), pil.ANTIALIAS)
+        img = img.crop((int(x_offset), int(y_offset), int(x_offset+int(crop_width)), int(y_offset+int(crop_height))))
+	img = img.resize((dst_width, dst_height), pil.ANTIALIAS)
         
     tmp = StringIO()
     img.save(tmp, 'JPEG')

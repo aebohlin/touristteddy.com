@@ -7,13 +7,15 @@ from touristteddy import utils
 from teddys.models import Teddy, Post, Comment
 import datetime
 
+
 def index(request):
 	teddys = Teddy.objects.all()
 	template = loader.get_template('teddys/index.html')
 	return HttpResponse(template.render(RequestContext(request,{
 			'teddys': teddys,
-		})))
+			})))
 
+	
 def detail(request, teddy_id):
 	teddy = get_object_or_404(Teddy, pk=teddy_id)
 	return render(request, 'teddys/detail.html', {'teddy': teddy})
@@ -23,9 +25,11 @@ def teddy_posts(request, teddy_id):
 	teddy = get_object_or_404(Teddy, pk=teddy_id)
 	return render(request, 'teddys/teddy_posts.html', {'teddy_posts': teddy.post_set.all() })
 
+
 def teddy_post(request, teddy_id, post_id):
 	teddy = get_object_or_404(Teddy, pk=teddy_id)
 	return render(request, 'teddys/teddy_posts.html', {'teddy_posts': teddy.post_set.all() })
+
 
 def post_comments_as_json(request, teddy_id, post_id):	
 	post = get_object_or_404(Post, pk=post_id)
@@ -34,10 +38,14 @@ def post_comments_as_json(request, teddy_id, post_id):
 		#username = "%s %s" % (comment.user.first_name, comment.user.last_name)
 		#if username == " ":
 		#	username = comment.user.username
-		comments.append([comment.comment, utils.get_username_or_fullname(comment.user), comment.user.id, utils.get_friendly_time(comment.comment_time)])
+		comments.append([comment.comment, 
+			utils.get_username_or_fullname(comment.user), 
+			comment.user.id, 
+			utils.get_friendly_time(comment.comment_time)])
 	
 	data = simplejson.dumps(comments)
 	return HttpResponse(data, mimetype='application/json')
+
 
 def post_comment(request, teddy_id, post_id):
 	success = False
@@ -52,6 +60,7 @@ def post_comment(request, teddy_id, post_id):
 		success = True
 	return HttpResponse(simplejson.dumps(success), mimetype='application/json')
 
+
 def create_post(request):
     title = ''
     description = ''
@@ -59,20 +68,30 @@ def create_post(request):
     lat = ''
     lng = ''
     teddy_id = ''
+
     if request.POST and request.user.is_authenticated():
         title = request.POST.get('title')	
         description = request.POST.get('description')
         picture = request.FILES['picture']
+	scaled_picture = utils.rescale(picture.read(), int(10),int(10), False) 
         #for filename, file in request.FILES.iteritems():
         #        picture = request.FILES[filename]
         #picture_path = request.POST.get('picture')
         utils.handle_uploaded_file(picture)
+	#utils.handle_uploaded_file(scaled_picture)
         lat = request.POST.get('lat')
         lng = request.POST.get('lng')
         teddy_id = request.POST.get('teddy_id')
         teddy = get_object_or_404(Teddy, pk=teddy_id)
-        post = Post(title = title, description = description, picture = picture, latitude = lat, longitude = lng, teddy = teddy, user = request.user)
+        post = Post(title = title, 
+			description = description, 
+			picture = picture, 
+			latitude = lat, 
+			longitude = lng, 
+			teddy = teddy, 
+			user = request.user)
         post.save()
+
     return render_to_response('teddys/create_post.html', {
 		'title': title,
 		'description': description,
