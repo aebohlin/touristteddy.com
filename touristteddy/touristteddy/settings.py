@@ -12,8 +12,8 @@ MANAGERS = ADMINS
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        #'NAME': '/Users/andersbohlin/Sites/touristteddy.com/touristteddy/sqlite3.db',
-        'NAME': '/home/aeb/projects/touristteddy.com/touristteddy/sqlite3.db',
+        'NAME': '/Users/andersbohlin/Sites/touristteddy.com/touristteddy/sqlite3.db',
+        #'NAME': '/home/aeb/projects/touristteddy.com/touristteddy/sqlite3.db',
         #'NAME': 'C:/Users/andboh/Documents/GitHub/touristteddy.com/touristteddy/sqlite3.db',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
@@ -47,8 +47,8 @@ USE_TZ = True
 
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/media/"
-#MEDIA_ROOT = '/Users/andersbohlin/Sites/touristteddy.com/touristteddy/media/'
-MEDIA_ROOT = '/home/aeb/projects/touristteddy.com/touristteddy/media/'
+MEDIA_ROOT = '/Users/andersbohlin/Sites/touristteddy.com/touristteddy/media/'
+#MEDIA_ROOT = '/home/aeb/projects/touristteddy.com/touristteddy/media/'
 #MEDIA_ROOT = 'C:/Users/andboh/Documents/GitHub/touristteddy.com/touristteddy/media/'
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash.
@@ -70,8 +70,8 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    #'/Users/andersbohlin/Sites/touristteddy.com/touristteddy/static/',
-    '/home/aeb/projects/touristteddy.com/touristteddy/static/',
+    '/Users/andersbohlin/Sites/touristteddy.com/touristteddy/static/',
+    #'/home/aeb/projects/touristteddy.com/touristteddy/static/',
     #'C:/Users/andboh/Documents/GitHub/touristteddy.com/touristteddy/static/',
 )
 
@@ -121,8 +121,8 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    #"/Users/andersbohlin/Sites/touristteddy.com/touristteddy/templates/"
-    "/home/aeb/projects/touristteddy.com/touristteddy/templates/"
+    "/Users/andersbohlin/Sites/touristteddy.com/touristteddy/templates/"
+    #"/home/aeb/projects/touristteddy.com/touristteddy/templates/"
     #"C:/Users/andboh/Documents/GitHub/touristteddy.com/touristteddy/templates/"
 )
 
