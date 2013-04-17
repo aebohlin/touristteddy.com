@@ -74,7 +74,9 @@ def create_post(request):
         title = request.POST.get('title')	
         description = request.POST.get('description')
         picture = request.FILES['picture']
-        scaled_picture = ContentFile(utils.rescale(picture.read(), int(10),int(10), False))
+        scaled_picture = ContentFile(utils.rescale(picture.read(), int(100),int(100), False))
+        scaled_picture.name = picture.name
+
         #for filename, file in request.FILES.iteritems():
         #        picture = request.FILES[filename]
         #picture_path = request.POST.get('picture')
@@ -86,7 +88,7 @@ def create_post(request):
         teddy = get_object_or_404(Teddy, pk=teddy_id)
         post = Post(title = title,
 			description = description,
-			picture = picture, 
+			picture = scaled_picture,
 			latitude = lat, 
 			longitude = lng, 
 			teddy = teddy,
