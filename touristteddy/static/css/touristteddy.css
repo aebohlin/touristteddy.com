@@ -1,27 +1,20 @@
 
 @import url('font-awesome.css');	
 
-body {
-	background-image:url('/static/images/textured_stripes.png');
-	background-repeat:repeat;
-	color: #3F3E3E;
-
-}
+body { 	background-image:url('/static/images/textured_stripes.png'); background-repeat:repeat;
+	    color: #3F3E3E; }
 
 h1, h2, h3, h4 { font-family: 'Happy Monkey', cursive;}
 
 a { color: #3F3E3E; text-decoration: none;}
 a:hover { text-decoration: underline;}
 
-#header {
-	width:100%;
-	padding:15px 0;
-	margin-bottom: 10px;
-	text-align: center;
-	/*background-image:url('/static/images/dark_Tire.png');
-	background-repeat:repeat;*/
-	background-color: rgba(21,20,20,0.3);
-}
+#header { width:100%;
+	    padding:15px 0;
+        margin-bottom: 10px;
+	    text-align: center;
+	    background-color: rgba(21,20,20,0.3); }
+
 #header h1 a { color: #f3f3f3; font-size: 72px; font-family: 'Finger Paint', cursive;}
 #header h1 a:hover { text-decoration: none;}
 #header h1 img { margin-left: 30px;} 
@@ -35,29 +28,33 @@ a:hover { text-decoration: underline;}
 .fpteddy h3 a { color: #fff; }
 
 .fppost { padding: 10px; background-color: #fff;-webkit-box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5);
-box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
+            box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
 .fppost h4 { text-align: center; padding: 10px 0;margin: 0;}
 .fppost a:hover { text-decoration: none; }
 .fppost img { text-align: left; width: 280px; }
-.fppost .fancy { display: none; }
-.fancy .fancy-content {  width: 960px; }
-.fancy .fancy-content img {  width: 100%; }
 
+.content { padding-bottom: 50px; }
+.login { margin-top: 20px;padding: 10px; }
+
+
+/********************* FANCYBOX ******************/
+
+.fppost .fancy { display: none; }
+.fancy .fancy-content {  width: 960px;position: relative; }
+.fancy .fancy-content img {  max-width: 100%; }
 .fancy .fancy-content .comments {  height: 435px; overflow:auto;margin-bottom: 10px; width: 230px;}
 .fancy .fancy-content .comment {  margin-bottom: 5px; }
 .fancy .fancy-content .comment .text {    }
 .fancy .fancy-content .comment .datetime {  color:#888;font-size: 12px;padding-bottom: 10px; display: block;border-bottom:1px solid #eee;}
 .fancy .fancy-content .comment a {  font-size: 12px; font-weight: bold;}
-.fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal;}
+.fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal; position: absolute; bottom: 0px;}
 .fancy .fancy-content #comment-form a {  font-size: 12px; font-weight: bold;}
 .fancy .fancy-content #comment-form input {  width: 190px;}
 
-.content { padding-bottom: 50px; } 
-.login { margin-top: 20px;padding: 10px; }
+/********************* /FANCYBOX ******************/
 
 
-
-/******************** LOGIN FORM ***********************/
+/******************** FORMS ***********************/
 
 *,
 *:after,
@@ -262,3 +259,5 @@ box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
         inset 0 0 5px rgba(0,0,0,0.3),
         inset 0 3px 4px rgba(0,0,0,0.3);
 }
+
+/******************** /FORMS ***********************/

@@ -18,13 +18,13 @@
 				<div class="grid_4">
 					<div class="fppost">
 						<a class="open-fancy" href="#{{ post.id }}">
-							<img src="{{ post.picture.url }}" alt="{{ post.title }}" />						
+							<img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />
 							<h4>{{ post.title }}</h4>
 						</a>
 						<div id="{{ post.id }}" class="fancy">
 							<div class="container_12 fancy-content">
 								<div class="grid_9">
-									<img src="{{ post.picture.url }}" alt="{{ post.title }}" />	
+									<img src="{{ post.picture.url }}" alt="{{ post.title }}" />
 								</div>
 								<div class="grid_3">
 									<div class="comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>
