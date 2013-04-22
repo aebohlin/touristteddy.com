@@ -2,48 +2,45 @@
 
 {% block content %}
 	{% if posts %}
-		<!-- <div class="grid_12">
-			<h2>Teddys</h2>
-		</div>
+        <div ng-controller="PostsCtrl" class="row">
 
-		-->
-            <div class="row">
-                <div class="span12 fpteddy">
-                    <h3>Latest travels!</h3>
-                </div>
+        </div>
+        <div class="row">
+            <div class="span12 fpteddy">
+                <h3>Latest travels!</h3>
             </div>
-            {% for post in posts %}
-                {% if forloop.counter|divisibleby:4 or forloop.counter == 1 or forloop.counter == posts.count %}
-                    <div class="row">
-                {% endif %}
-
-                    <div class="span4">
-                        <div class="fppost">
-                            <a class="open-fancy" href="#{{ post.id }}">
-                                <img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />
-                                <h4>{{ post.title }}</h4>
-                            </a>
-                            <div id="{{ post.id }}" class="fancy">
-                                <div class="row fancy-content">
-                                    <div class="span9">
-                                        <img src="{{ post.picture.url }}" alt="{{ post.title }}" />
-                                    </div>
-                                    <div class="span3">
-                                        <div class="comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>
-                                        <div id="comment-form">
+        </div>
+        {% for post in posts %}
+            {% if forloop.counter|divisibleby:4 or forloop.counter == 1 or forloop.counter == posts.count %}
+                <div class="row">
+            {% endif %}
+                <div class="span4">
+                    <div class="fppost">
+                        <a class="open-fancy" href="#{{ post.id }}">
+                            <img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />
+                            <h4>{{ post.title }}</h4>
+                        </a>
+                        <div id="{{ post.id }}" class="fancy">
+                            <div class="row fancy-content">
+                                <div class="span9">
+                                    <img src="{{ post.picture.url }}" alt="{{ post.title }}" />
+                                </div>
+                                <div class="span3">
+                                    <div class="comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>
+                                    <div id="comment-form">
                                             {% if request.user.is_authenticated %}
-                                                {% csrf_token %}
-                                                {{ username }}:
-                                                <input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />
-                                            {% else %}
-                                                Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
-                                            {% endif %}
-                                        </div>
+                                            {% csrf_token %}
+                                            {{ username }}:
+                                            <input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />
+                                        {% else %}
+                                            Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
                 {% if forloop.counter|divisibleby:3 or forloop.counter == posts.count %}
                     </div>
