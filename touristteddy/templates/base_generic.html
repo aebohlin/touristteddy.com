@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/reset.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/text.css" />
-	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/960.css" />
+{#	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/reset.css" />#}
+{#	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/text.css" />#}
+{#	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/960.css" />#}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}css/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="{{ STATIC_URL }}css/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+
 	<link rel="stylesheet" type="text/css" media="all" href="{{ STATIC_URL }}css/touristteddy.css" />
 	<link href='http://fonts.googleapis.com/css?family=Happy+Monkey' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
-	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="{{ STATIC_URL }}js/touristteddy.js"></script>
 
 	<!-- Add fancyBox -->
 	<link rel="stylesheet" href="{{ STATIC_URL }}js/fancybox/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
-	<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
 
 	<!-- Optionally add helpers - button, thumbnail and/or media -->
 	<link rel="stylesheet" href="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-	<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-	<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
-
 	<link rel="stylesheet" href="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-	<script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
 
 </head>
 <body>
 	<div id="header">
 		<h1><a href="/">Tourist Teddy</a><!-- <img src="{{ STATIC_URL }}images/logo.png" />--></h1>
 	</div>
-	<div class="container_12 content">
-		<div class="grid_12 topmenu">
+	<div class="container">
+		<div class="row topmenu">
 			<a href="/Teddys">Teddys</a>
 			<a href="/About">About</a>
 			<a class="right" href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">Login</a>
@@ -39,5 +38,16 @@
 			<p>Welcome to touristteddy.com</p>
 		{% endblock content %}
 	</div>
+
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="{{ STATIC_URL }}css/bootstrap/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript" src="{{ STATIC_URL }}js/touristteddy.js"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/jquery.fancybox.pack.js?v=2.1.4"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
+    <script type="text/javascript" src="{{ STATIC_URL }}js/fancybox/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
 </body>
 </html>
