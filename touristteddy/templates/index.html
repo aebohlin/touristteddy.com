@@ -2,9 +2,7 @@
 
 {% block content %}
 	{% if posts %}
-        <div ng-controller="PostsCtrl" class="row">
 
-        </div>
         <div class="row">
             <div class="span12 fpteddy">
                 <h3>Latest travels!</h3>
@@ -14,11 +12,11 @@
             {% if forloop.counter|divisibleby:4 or forloop.counter == 1 or forloop.counter == posts.count %}
                 <div class="row">
             {% endif %}
-                <div class="span4">
+                <div class="span4" ng-controller="PostCtrl" ng-init="init('/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json')">
                     <div class="fppost">
                         <a class="open-fancy" href="#{{ post.id }}">
                             <img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />
-                            <h4>{{ post.title }}</h4>
+                            <h4>{{ post.title }} <span class="comment-count">[[ comments.length ]]</span></h4>
                         </a>
                         <div id="{{ post.id }}" class="fancy">
                             <div class="row fancy-content">
@@ -26,9 +24,16 @@
                                     <img src="{{ post.picture.url }}" alt="{{ post.title }}" />
                                 </div>
                                 <div class="span3">
-                                    <div class="comments" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>
+                                    <div class="comments">
+                                       <div class="comment" ng-repeat="comment in comments">
+                                           <a href="/users/[[ comment.user_id ]]/" class="user">[[ comment.user_name ]]</a>
+                                           <span class="text">[[ comment.comment ]]</span>
+                                           <span class="datetime">[[ comment.comment_time ]]</span>
+                                       </div>
+                                    </div>
+{#                                    <div class="comments" style="display: none;" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>#}
                                     <div id="comment-form">
-                                            {% if request.user.is_authenticated %}
+                                        {% if request.user.is_authenticated %}
                                             {% csrf_token %}
                                             {{ username }}:
                                             <input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />

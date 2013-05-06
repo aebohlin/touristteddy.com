@@ -29,7 +29,9 @@ a:hover { text-decoration: underline;}
 
 .fppost {  padding: 10px; background-color: #fff;-webkit-box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5);
             box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px; }
-.fppost h4 { text-align: center; padding: 10px 0;margin: 0;}
+.fppost h4 { text-align: left; padding: 10px 0;margin: 0; position: relative;}
+.fppost h4 span.comment-count { font-size: 12px; background: url('/static/images/comment.png') top left; background-repeat: no-repeat;
+            height: 27px; width: 29px; position: absolute; right: 1px; top: 10px; line-height: 21px; text-align: center; color: #999; }
 .fppost a:hover { text-decoration: none; }
 .fppost img { text-align: left;width: 100%;
     /*width: 280px; */

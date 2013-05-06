@@ -35,7 +35,7 @@ touristteddy = {}
 touristteddy.DAL = {
 	loadComments: function ($fancy) {
 		var $comments = $fancy.find(".comments");
-		$comments.html('');
+		//$comments.html('');
 		$.ajax({
 			url: $comments.data("url"), 
 			success:function (result) {
@@ -44,7 +44,7 @@ touristteddy.DAL = {
 					var username = result[i][1];
 					var userid = result[i][2];
 					var datetime = result[i][3];
-					$comments.append('<div class="comment"><a href="/users/' + userid + '/" class="user">' + username + '</a> <span class="text">' + comment + '</span><span class="datetime">' + datetime + '</span></div>');					
+					//$comments.append('<div class="comment"><a href="/users/' + userid + '/" class="user">' + username + '</a> <span class="text">' + comment + '</span><span class="datetime">' + datetime + '</span></div>');
 				};
 			}
 		});	

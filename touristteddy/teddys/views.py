@@ -1,4 +1,5 @@
 import datetime
+from django.core import serializers
 from django.core.files.base import ContentFile
 from django.http import HttpResponse
 from django.template import loader, RequestContext
@@ -6,6 +7,7 @@ from django.shortcuts import render_to_response, render, get_object_or_404
 from django.utils import simplejson
 from touristteddy import utils
 from teddys.models import Teddy, Post, Comment
+import json
 
 
 def index(request):
@@ -39,8 +41,15 @@ def post_comments_as_json(request, teddy_id, post_id):
                          utils.get_username_or_fullname(comment.user),
                          comment.user.id,
                          utils.get_friendly_time(comment.comment_time)])
+    comments = post.comment_set.all().order_by("-comment_time")
+    comment_dictionary = [{
+                          'comment': c.comment,
+                          'comment_time': utils.get_friendly_time(c.comment_time),
+                          'user_id': c.user.id,
+                          'user_name': c.user.username,
 
-    data = simplejson.dumps(comments)
+                          } for c in comments]
+    data = json.dumps(comment_dictionary)
     return HttpResponse(data, mimetype='application/json')
 
 
