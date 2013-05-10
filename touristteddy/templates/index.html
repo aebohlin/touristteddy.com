@@ -1,58 +1,103 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-	{% if posts %}
-
-        <div class="row">
-            <div class="span12 fpteddy">
-                <h3>Latest travels!</h3>
-            </div>
+    <div class="row">
+        <div class="span12 fpteddy">
+            <h3>Latest travels!</h3>
         </div>
-        {% for post in posts %}
-            {% if forloop.counter|divisibleby:4 or forloop.counter == 1 or forloop.counter == posts.count %}
-                <div class="row">
-            {% endif %}
-                <div class="span4" ng-controller="PostCtrl" ng-init="init('/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json')">
-                    <div class="fppost">
-                        <a class="open-fancy" href="#{{ post.id }}">
-                            <img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />
-                            <h4>{{ post.title }} <span class="comment-count">[[ comments.length ]]</span></h4>
-                        </a>
-                        <div id="{{ post.id }}" class="fancy">
-                            <div class="row fancy-content">
-                                <div class="span9">
-                                    <img src="{{ post.picture.url }}" alt="{{ post.title }}" />
+    </div>
+
+    <div ng-controller="PostsCtrl" ng-init="init('/posts/json')" class="row">
+        <div ng-repeat="post in posts">
+            <div class="span4">
+                <div class="fppost">
+                    <a class="open-fancy" href="#[[ post.id ]]">
+                        <img src="[[ post.small_picture ]]" alt="[[ post.title ]]" />
+                        <h4>[[ post.title ]] <span class="comment-count">[[ post.comments.length ]]</span></h4>
+                    </a>
+
+                    <div id="[[ post.id ]]" class="fancy">
+                        <div class="row fancy-content">
+                            <div class="span9">
+                                <img src="[[ post.picture ]]" alt="[[ post.title ]]" />
+                            </div>
+                            <div class="span3">
+                                <div class="comments">
+                                   <div class="comment" ng-repeat="comment in post.comments">
+                                       <a href="/users/[[ comment.user_id ]]/" class="user">[[ comment.user_name ]]</a>
+                                       <span class="text">[[ comment.comment ]]</span>
+                                       <span class="datetime">[[ comment.comment_time ]]</span>
+                                   </div>
                                 </div>
-                                <div class="span3">
-                                    <div class="comments">
-                                       <div class="comment" ng-repeat="comment in comments">
-                                           <a href="/users/[[ comment.user_id ]]/" class="user">[[ comment.user_name ]]</a>
-                                           <span class="text">[[ comment.comment ]]</span>
-                                           <span class="datetime">[[ comment.comment_time ]]</span>
-                                       </div>
-                                    </div>
-{#                                    <div class="comments" style="display: none;" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>#}
-                                    <div id="comment-form">
-                                        {% if request.user.is_authenticated %}
-                                            {% csrf_token %}
-                                            {{ username }}:
-                                            <input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />
-                                        {% else %}
-                                            Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
-                                        {% endif %}
-                                    </div>
+                                <div id="comment-form" >
+                                    {% if request.user.is_authenticated %}
+                                        {% csrf_token %}
+                                        {{ username }}:
+                                        <input type="text" class="commentText" ng-click="postComment(post)" data-url="/teddys/[[ post.teddy.id ]]/posts/[[ post.id ]]/comments/add" />
+                                    {% else %}
+                                        Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
+                                    {% endif %}
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                {% if forloop.counter|divisibleby:3 or forloop.counter == posts.count %}
-                    </div>
-                {% endif %}
-            {% endfor %}
-        <!--	-->
-	{% endif %}
+{#	{% if posts %}#}
+{##}
+{#        <div class="row">#}
+{#            <div class="span12 fpteddy">#}
+{#                <h3>Latest travels!</h3>#}
+{#            </div>#}
+{#        </div>#}
+{#        {% for post in posts %}#}
+{#            {% if forloop.counter|divisibleby:4 or forloop.counter == 1 or forloop.counter == posts.count %}#}
+{#                <div class="row">#}
+{#            {% endif %}#}
+{#                <div class="span4" ng-controller="PostCtrl" ng-init="init('/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json')">#}
+{#                    <div class="fppost">#}
+{#                        <a class="open-fancy" href="#{{ post.id }}">#}
+{#                            <img src="{{ post.small_picture.url }}" alt="{{ post.title }}" />#}
+{#                            <h4>{{ post.title }} <span class="comment-count">[[ comments.length ]]</span></h4>#}
+{#                        </a>#}
+{#                        <div id="{{ post.id }}" class="fancy">#}
+{#                            <div class="row fancy-content">#}
+{#                                <div class="span9">#}
+{#                                    <img src="{{ post.picture.url }}" alt="{{ post.title }}" />#}
+{#                                </div>#}
+{#                                <div class="span3">#}
+{#                                    <div class="comments">#}
+{#                                       <div class="comment" ng-repeat="comment in comments">#}
+{#                                           <a href="/users/[[ comment.user_id ]]/" class="user">[[ comment.user_name ]]</a>#}
+{#                                           <span class="text">[[ comment.comment ]]</span>#}
+{#                                           <span class="datetime">[[ comment.comment_time ]]</span>#}
+{#                                       </div>#}
+{#                                    </div>#}
+{#                                    <div class="comments" style="display: none;" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/json"></div>#}
+{#                                    <div id="comment-form">#}
+{#                                        {% if request.user.is_authenticated %}#}
+{#                                            {% csrf_token %}#}
+{#                                            {{ username }}:#}
+{#                                            <input type="text" class="commentText" data-url="/teddys/{{ post.teddy.id }}/posts/{{ post.id }}/comments/add" />#}
+{#                                        {% else %}#}
+{#                                            Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments#}
+{#                                        {% endif %}#}
+{#                                    </div>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
+{##}
+{#                {% if forloop.counter|divisibleby:3 or forloop.counter == posts.count %}#}
+{#                    </div>#}
+{#                {% endif %}#}
+{#            {% endfor %}#}
+{#        <!--	-->#}
+{#	{% endif %}#}
 
 		
 {% endblock content %}
