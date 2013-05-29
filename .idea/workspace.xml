@@ -2,17 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" name="Default" comment="angularjs folder structure">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/sqlite3.db" afterPath="$PROJECT_DIR$/touristteddy/sqlite3.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" afterPath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/templates/index.html" afterPath="$PROJECT_DIR$/touristteddy/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/touristteddy.com.iml" afterPath="$PROJECT_DIR$/.idea/touristteddy.com.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/urls.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/views.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="touristteddy.com.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -552,7 +542,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
