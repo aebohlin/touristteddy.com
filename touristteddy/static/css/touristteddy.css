@@ -44,48 +44,53 @@ a:hover { text-decoration: underline;}
 
 }
 
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
+}
+
 /********************* FANCYBOX ******************/
 
 @media (min-width: 980px) {
     .fppost .fancy { display: none; }
-    .fancy .fancy-content {  width: 960px;position: relative; }
+    .fancy .fancy-content {  width: 960px;position: relative;background-color: white;padding: 15px 0px 15px 0px; }
     .fancy .fancy-content img {  max-width: 100%; }
-    .fancy .fancy-content .comments {  height: 435px; overflow:auto;margin-bottom: 10px; width: 220px;}
+    .fancy .fancy-content .comments {  height: 405px; overflow:auto;margin-bottom: 10px; width: 220px;}
     .fancy .fancy-content .comment {  margin-bottom: 5px; }
     .fancy .fancy-content .comment .text {    }
     .fancy .fancy-content .comment .datetime {  color:#888;font-size: 12px;padding-bottom: 10px; display: block;border-bottom:1px solid #eee;}
     .fancy .fancy-content .comment a {  font-size: 12px; font-weight: bold;}
     .fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal; position: absolute; bottom: 0px;}
     .fancy .fancy-content #comment-form a {  font-size: 12px; font-weight: bold;}
-    .fancy .fancy-content #comment-form input {  width: 190px;}
+    .fancy .fancy-content #comment-form input {  width: 175px;}
 }
 
 @media (min-width: 768px) and (max-width: 979px) {
     .fppost .fancy { display: none; }
     .fancy .fancy-content {  width: 768px;position: relative; }
     .fancy .fancy-content img {  max-width: 100%; }
-    .fancy .fancy-content .comments {  height: 435px; overflow:auto;margin-bottom: 10px; width: 190px;}
+    .fancy .fancy-content .comments {  height: 405px; overflow:auto;margin-bottom: 10px; width: 190px;}
     .fancy .fancy-content .comment {  margin-bottom: 5px; }
     .fancy .fancy-content .comment .text {    }
     .fancy .fancy-content .comment .datetime {  color:#888;font-size: 12px;padding-bottom: 10px; display: block;border-bottom:1px solid #eee;}
     .fancy .fancy-content .comment a {  font-size: 12px; font-weight: bold;}
     .fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal; position: absolute; bottom: 0px;}
     .fancy .fancy-content #comment-form a {  font-size: 12px; font-weight: bold;}
-    .fancy .fancy-content #comment-form input {  width: 190px;}
+    .fancy .fancy-content #comment-form input {  width: 175px;}
 }
 
 @media (max-width: 480px) {
     .fppost .fancy { display: none; }
     .fancy .fancy-content {  width:100%;height:100%; position: relative; }
     .fancy .fancy-content img {  max-width: 100%; }
-    .fancy .fancy-content .comments {  max-height: 435px; overflow:auto;margin-bottom: 10px; width:100%;}
+    .fancy .fancy-content .comments {  max-height: 405px; overflow:auto;margin-bottom: 10px; width:100%;}
     .fancy .fancy-content .comment {  margin-bottom: 5px; }
     .fancy .fancy-content .comment .text {    }
     .fancy .fancy-content .comment .datetime {  color:#888;font-size: 12px;padding-bottom: 10px; display: block;border-bottom:1px solid #eee;}
     .fancy .fancy-content .comment a {  font-size: 12px; font-weight: bold;}
     .fancy .fancy-content #comment-form {  font-size: 12px; font-weight: normal; position: absolute; bottom: 0px;}
     .fancy .fancy-content #comment-form a {  font-size: 12px; font-weight: bold;}
-    .fancy .fancy-content #comment-form input {  width: 190px;}
+    .fancy .fancy-content #comment-form input {  width: 175px;}
     .fancybox-overlay .fancybox-wrap {width: 100%!important;height:100%!important; top:0!important; left:0!important;}
     .fancybox-overlay .fancybox-skin {height:auto!important; }
     .fancybox-close {right:0!important; top:0!important;}

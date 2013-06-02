@@ -8,3 +8,22 @@ var touristteddyApp = angular.module('touristteddyApp', [])
         $interpolateProvider.startSymbol('[[');
         $interpolateProvider.endSymbol(']]');
     });
+
+
+touristteddyApp.directive('openFancybox', function() {
+    return function(scope, element, attrs) {
+        $(element).click(function(event) {
+            event.preventDefault();
+            $(attrs.href).lightbox_me();
+            //    $('#try-1').click(function(e) {
+            //        $('#sign_up').lightbox_me({
+            //            centered: true,
+            //            onLoad: function () {
+            //                $('#sign_up').find('input:first').focus()
+            //            }
+            //        });
+            //        e.preventDefault();
+            //    });
+        });
+    };
+});

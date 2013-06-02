@@ -3,7 +3,7 @@
 {% block content %}
     <div class="row">
         <div class="span12 fpteddy">
-            <h3>Latest travels!</h3>
+            <h3 >Latest travels!</h3>
         </div>
     </div>
 
@@ -11,7 +11,7 @@
         <div ng-repeat="post in posts">
             <div class="span4">
                 <div class="fppost">
-                    <a class="open-fancy" href="#[[ post.id ]]">
+                    <a href="#[[ post.id ]]" open-fancybox>
                         <img src="[[ post.small_picture ]]" alt="[[ post.title ]]" />
                         <h4>[[ post.title ]] <span class="comment-count">[[ post.comments.length ]]</span></h4>
                     </a>
@@ -31,9 +31,13 @@
                                 </div>
                                 <div id="comment-form" >
                                     {% if request.user.is_authenticated %}
-                                        {% csrf_token %}
-                                        {{ username }}:
-                                        <input type="text" class="commentText" ng-click="postComment(post)" data-url="/teddys/[[ post.teddy.id ]]/posts/[[ post.id ]]/comments/add" />
+                                        <form novalidate class="simple-form">
+                                            {{ username }}: <input type="text" class="commentText" ng-model="comment.comment" />
+                                            <button ng-click="postComment(post, comment)" style="position: absolute; left: -9999px; width: 1px; height: 1px;"></button>
+                                        </form>
+{#                                        {% csrf_token %}#}
+{#                                        {{ username }}:#}
+{#                                        <input type="text" class="commentText" ng-click="postComment(post)" data-url="/teddys/[[ post.teddy.id ]]/posts/[[ post.id ]]/comments/add" />#}
                                     {% else %}
                                         Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
                                     {% endif %}

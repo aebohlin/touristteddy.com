@@ -14,7 +14,10 @@ function PostsCtrl($scope, $http) {
             $scope.posts = data;
         });
     };
-    $scope.postComment = function (post) {
-        alert(post.title);
+
+    $scope.postComment = function (post, comment) {
+        alert(post.teddy.id + comment.comment);
     };
+
+
 }
