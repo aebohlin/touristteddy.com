@@ -53,8 +53,23 @@ def post_comments_as_json(request, teddy_id, post_id):
     return HttpResponse(data, mimetype='application/json')
 
 
-def post_comment(request, teddy_id, post_id):
+def post_comment2(request, teddy_id, post_id):
     success = False
+    if request.user.is_authenticated():
+        post = get_object_or_404(Post, pk=post_id)
+        comment = Comment()
+        comment.comment = request.POST.get('comment')
+        comment.comment_time = datetime.datetime.now()
+        comment.post = post
+        comment.user = request.user
+        comment.save()
+        success = True
+    return HttpResponse(simplejson.dumps(success), mimetype='application/json')
+
+
+def post_comment(comment, teddy_id, post_id):
+    success = False
+    return HttpResponse(simplejson.dumps(comment.comment), mimetype='application/json')
     if request.user.is_authenticated():
         post = get_object_or_404(Post, pk=post_id)
         comment = Comment()
@@ -76,7 +91,7 @@ def create_post(request):
     teddy_id = ''
 
     if request.POST and request.user.is_authenticated():
-        title = request.POST.get('title')	
+        title = request.POST.get('title')
         description = request.POST.get('description')
         picture = request.FILES['picture']
         picture_file = picture.read()

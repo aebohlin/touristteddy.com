@@ -31,13 +31,16 @@
                                 </div>
                                 <div id="comment-form" >
                                     {% if request.user.is_authenticated %}
-                                        <form novalidate class="simple-form">
-                                            {{ username }}: <input type="text" class="commentText" ng-model="comment.comment" />
-                                            <button ng-click="postComment(post, comment)" style="position: absolute; left: -9999px; width: 1px; height: 1px;"></button>
+                                        <form novalidate class="simple-form" ng-init="initComment(post)">
+                                            <input type="text" class="commentText" ng-model="comment.comment" placeholder="Write a comment..." />
+                                            <input type="hidden" ng-model="comment.teddy_id" />
+                                            <input type="hidden" ng-model="comment.post_id"  />
+                                            {% csrf_token %}
+                                            <input type="submit" ng-click="postComment()" style="position: absolute; left: -9999px; width: 1px; height: 1px;"/>
                                         </form>
 {#                                        {% csrf_token %}#}
 {#                                        {{ username }}:#}
-{#                                        <input type="text" class="commentText" ng-click="postComment(post)" data-url="/teddys/[[ post.teddy.id ]]/posts/[[ post.id ]]/comments/add" />#}
+{#                                        <input type="text" class="commentText" ng-click="postComment(post)" style="display:none;" />#}
                                     {% else %}
                                         Please <a href="{% url "touristteddy.views.login_user" %}?next={{request.path}}">log in</a> to post comments
                                     {% endif %}
@@ -103,5 +106,5 @@
 {#        <!--	-->#}
 {#	{% endif %}#}
 
-		
+
 {% endblock content %}

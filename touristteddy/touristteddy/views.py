@@ -30,8 +30,11 @@ def get_posts_as_json(request):
                        'picture': p.picture.url,
                        'user_id': p.user.id,
                        'user_name': p.user.username,
+                       'teddy_id': p.teddy.id,
                        'comments': [{
                                     'comment': c.comment,
+                                    'teddy_id': p.teddy.id,
+                                    'post_id': p.id,
                                     'comment_time': utils.get_friendly_time(c.comment_time),
                                     'user_id': c.user.id,
                                     'user_name': c.user.username, } for c in p.comment_set.all()], } for p in posts]
