@@ -4,7 +4,7 @@ from django.core.files.base import ContentFile
 from django.http import HttpResponse
 from django.template import loader, RequestContext
 from django.shortcuts import render_to_response, render, get_object_or_404
-from django.utils import simplejson
+from django.utils import simplejson, timezone
 from touristteddy import utils
 from teddys.models import Teddy, Post, Comment
 import json
@@ -67,19 +67,26 @@ def post_comment2(request, teddy_id, post_id):
     return HttpResponse(simplejson.dumps(success), mimetype='application/json')
 
 
-def post_comment(comment, teddy_id, post_id):
-    success = False
-    return HttpResponse(simplejson.dumps(comment.comment), mimetype='application/json')
+def post_comment(request, teddy_id, post_id):
+    request_comment = json.loads(request.body)
+    comment = Comment()
     if request.user.is_authenticated():
         post = get_object_or_404(Post, pk=post_id)
-        comment = Comment()
-        comment.comment = request.POST.get('comment')
+        comment.comment = request_comment['comment']
         comment.comment_time = datetime.datetime.now()
         comment.post = post
         comment.user = request.user
         comment.save()
-        success = True
-    return HttpResponse(simplejson.dumps(success), mimetype='application/json')
+
+    comment_time_tz_aware = timezone.make_aware(comment.comment_time, timezone.get_default_timezone())
+    json_comment = {
+        'comment': comment.comment,
+        'comment_time': utils.get_friendly_time(comment_time_tz_aware),
+        'user_id': comment.user.id,
+        'user_name': comment.user.username
+    }
+
+    return HttpResponse(json.dumps(json_comment), mimetype='application/json')
 
 
 def create_post(request):

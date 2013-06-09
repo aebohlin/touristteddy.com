@@ -2,37 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" name="Default" comment="angularjs folder structure">
-
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/touristteddy/static/js/jquery.lightbox_me.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/sqlite3.db" afterPath="$PROJECT_DIR$/touristteddy/sqlite3.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/js/angular/app/app.js" afterPath="$PROJECT_DIR$/touristteddy/static/js/angular/app/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/templates/base_generic.html" afterPath="$PROJECT_DIR$/touristteddy/templates/base_generic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" afterPath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/templates/index.html" afterPath="$PROJECT_DIR$/touristteddy/templates/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" afterPath="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/js/touristteddy.js" afterPath="$PROJECT_DIR$/touristteddy/static/js/touristteddy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/utils.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/utils.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/teddys/views.py" afterPath="$PROJECT_DIR$/touristteddy/teddys/views.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="touristteddy.com.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368726396361" ignored="false" />
+    <file path="/Dummy.txt" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370607714402" ignored="false" />
     <file path="/a.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1366129813318" ignored="false" />
-    <file path="/settings.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368174274523" ignored="false" />
-    <file path="/views.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368177090209" ignored="false" />
+    <file path="/settings.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370771280784" ignored="false" />
+    <file path="/views.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370610681162" ignored="false" />
     <file path="/models.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1366303875239" ignored="false" />
     <file path="/tests.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1366304656763" ignored="false" />
     <file path="/a.sql" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1366305509725" ignored="false" />
     <file path="/dummy.sql" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1366305506940" ignored="false" />
-    <file path="/index.html" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368343833330" ignored="false" />
-    <file path="/touristteddy.css" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368264126598" ignored="false" />
-    <file path="/base_generic.html" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368206294082" ignored="false" />
+    <file path="/index.html" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370679801589" ignored="false" />
+    <file path="/touristteddy.css" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370798709101" ignored="false" />
+    <file path="/base_generic.html" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370799515503" ignored="false" />
     <file path="/app.js" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368210378775" ignored="false" />
-    <file path="/controllers.js" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368343918216" ignored="false" />
+    <file path="/controllers.js" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370795669471" ignored="false" />
     <file path="/money_per_day.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1367859175064" ignored="false" />
     <file path="/urls.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368175398255" ignored="false" />
     <file path="/touristteddy.js" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368207754228" ignored="false" />
     <file path="/jquery.lightbox_me.js" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1368264297238" ignored="false" />
+    <file path="/fragment.py" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370610809583" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,25 +59,16 @@
       <file leaf-file-name="controllers.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="45" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
+            <state line="34" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base_generic.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/touristteddy/templates/base_generic.html">
+      <file leaf-file-name="settings.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="91" selection-start="2071" selection-end="2163" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/touristteddy/static/js/angular/app/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="35" selection-start="580" selection-end="580" vertical-scroll-proportion="0.0">
+            <state line="45" column="0" selection-start="1776" selection-end="1776" vertical-scroll-proportion="-7.8">
               <folding />
             </state>
           </provider>
@@ -87,34 +77,68 @@
       <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/touristteddy/teddys/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="46" selection-start="1629" selection-end="1913" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="94" column="15" selection-start="3394" selection-end="3394" vertical-scroll-proportion="-5.48">
+              <folding>
+                <element signature="e#0#15#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/views.py">
+      <file leaf-file-name="utils.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/utils.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
+            <state line="1" column="33" selection-start="15" selection-end="49" vertical-scroll-proportion="-0.6">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="urls.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/urls.py">
+      <file leaf-file-name="base.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="63" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
+            <state line="114" column="0" selection-start="4779" selection-end="4779" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="__init__.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="325" column="0" selection-start="13299" selection-end="13299" vertical-scroll-proportion="0.0">
+              <folding>
+                <marker date="1359644261000" expanded="true" signature="1898:2015" placeholder="..." />
+                <marker date="1359644261000" expanded="true" signature="2337:2489" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="decoder.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="369" column="0" selection-start="13205" selection-end="13205" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/touristteddy/templates/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="49" column="13" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.5611511">
+            <state line="31" column="19" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-19.375">
+              <folding>
+                <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="base_generic.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/touristteddy/templates/base_generic.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="66" selection-start="1710" selection-end="1710" vertical-scroll-proportion="0.34532374">
               <folding />
             </state>
           </provider>
@@ -123,16 +147,7 @@
       <file leaf-file-name="touristteddy.css" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/touristteddy/static/css/touristteddy.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="74" column="49" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="touristteddy.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/touristteddy/static/js/touristteddy.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="33" selection-start="394" selection-end="394" vertical-scroll-proportion="0.0">
+            <state line="47" column="49" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -156,22 +171,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/touristteddy/teddys/models.py" />
         <option value="$PROJECT_DIR$/touristteddy/teddys/tests.py" />
         <option value="dbtable:/478f2c0/70fe0042-0df4-487a-9075-c10767ab92d2/..teddys_post" />
         <option value="$PROJECT_DIR$/touristteddy/static/css/bootstrap/css/bootstrap-responsive.min.css" />
         <option value="$USER_HOME$/Google Drive/Projects/python/utils/money_per_day.py" />
-        <option value="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" />
-        <option value="$PROJECT_DIR$/touristteddy/teddys/views.py" />
         <option value="$PROJECT_DIR$/touristteddy/touristteddy/urls.py" />
         <option value="$PROJECT_DIR$/touristteddy/touristteddy/views.py" />
         <option value="$PROJECT_DIR$/touristteddy/static/js/touristteddy.js" />
-        <option value="$PROJECT_DIR$/touristteddy/templates/base_generic.html" />
         <option value="$PROJECT_DIR$/touristteddy/static/js/angular/app/app.js" />
         <option value="$PROJECT_DIR$/touristteddy/static/js/jquery.lightbox_me.js" />
-        <option value="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" />
-        <option value="$PROJECT_DIR$/touristteddy/templates/index.html" />
+        <option value="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" />
+        <option value="$PROJECT_DIR$/touristteddy/touristteddy/utils.py" />
+        <option value="$PROJECT_DIR$/touristteddy/teddys/views.py" />
         <option value="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" />
+        <option value="$PROJECT_DIR$/touristteddy/templates/index.html" />
+        <option value="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" />
+        <option value="$PROJECT_DIR$/touristteddy/templates/base_generic.html" />
       </list>
     </option>
   </component>
@@ -201,6 +216,9 @@
             <id>Error handlingJavaScript</id>
           </State>
           <State>
+            <id>GeneralJavaScript</id>
+          </State>
+          <State>
             <id>JavaScript</id>
           </State>
           <State>
@@ -210,6 +228,11 @@
             <id>Python</id>
           </State>
         </expanded-state>
+        <selected-state>
+          <State>
+            <id>JSValidateTypes</id>
+          </State>
+        </selected-state>
       </profile-state>
     </entry>
   </component>
@@ -239,7 +262,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -317,24 +339,91 @@
               <option name="myItemId" value="static" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="angular" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy.com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="touristteddy" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="static" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="Database.TableEditor.Splitter" value="0.9" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/touristteddy" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/touristteddy" />
     <property name="FullScreen" value="false" />
-    <property name="dynamic.classpath" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
     <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -390,27 +479,6 @@
       <option name="PARAMETERS" value="" />
       <method />
     </configuration>
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/touristteddy" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <module name="touristteddy.com" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="127.0.0.1" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="http://127.0.0.1:8000/" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -432,6 +500,27 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/System/Library/Frameworks/Python.framework/Versions/2.7/bin/python" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/touristteddy" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <module name="touristteddy.com" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="127.0.0.1" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="http://127.0.0.1:8000/" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -448,6 +537,13 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugSession" factoryName="Local" singleton="true">
+      <JSDebuggerConfigurationSettings>
+        <option name="engineId" />
+        <option name="fileUrl" />
+      </JSDebuggerConfigurationSettings>
       <method />
     </configuration>
     <configuration default="true" type="com.intellij.persistence.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
@@ -571,7 +667,6 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-
     <frame x="4" y="22" width="1436" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
@@ -579,11 +674,11 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22052401" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19856115" sideWeight="0.7228608" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20143884" sideWeight="0.7228608" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.39974457" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33080426" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.33077905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -653,66 +748,13 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="15" />
+      <option name="time" value="17" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/touristteddy/teddys/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/teddys/tests.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="0" selection-start="383" selection-end="383" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Google Drive/Projects/python/utils/money_per_day.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="19" selection-end="19" vertical-scroll-proportion="0.021008404" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="16" selection-start="6005" selection-end="6005" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/teddys/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="17" selection-start="429" selection-end="442" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="63" selection-start="1081" selection-end="1081" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/utils.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="36" selection-start="408" selection-end="408" vertical-scroll-proportion="0.32578397" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/teddys/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="46" selection-start="1629" selection-end="1913" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="725" selection-end="725" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/templates/base_generic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="91" selection-start="2071" selection-end="2163" vertical-scroll-proportion="0.0">
+        <state line="24" column="0" selection-start="759" selection-end="759" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -726,23 +768,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/touristteddy/static/js/jquery.lightbox_me.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="203" column="0" selection-start="8137" selection-end="8137" vertical-scroll-proportion="0.061196107">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/static/css/touristteddy.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="49" selection-start="3305" selection-end="3305" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="45" selection-start="476" selection-end="476" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="203" column="0" selection-start="8137" selection-end="8137" vertical-scroll-proportion="0.061196107" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/touristteddy/static/js/touristteddy.js">
@@ -752,9 +778,93 @@
         </state>
       </provider>
     </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="3013" selection-end="3013" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/http/request.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="188" column="0" selection-start="7071" selection-end="7071" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/decoder.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="369" column="0" selection-start="13205" selection-end="13205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///System/Library/Frameworks/Python.framework/Versions/2.7/lib/python2.7/json/__init__.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="325" column="0" selection-start="13299" selection-end="13299" vertical-scroll-proportion="0.0">
+          <folding>
+            <marker date="1359644261000" expanded="true" signature="1898:2015" placeholder="..." />
+            <marker date="1359644261000" expanded="true" signature="2337:2489" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file:///Library/Python/2.7/site-packages/django/core/handlers/base.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="114" column="0" selection-start="4779" selection-end="4779" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="45" column="0" selection-start="1776" selection-end="1776" vertical-scroll-proportion="-7.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/touristteddy/utils.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="33" selection-start="15" selection-end="49" vertical-scroll-proportion="-0.6">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/teddys/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="15" selection-start="3394" selection-end="3394" vertical-scroll-proportion="-5.48">
+          <folding>
+            <element signature="e#0#15#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="841" selection-end="841" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/static/css/touristteddy.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="49" selection-start="1968" selection-end="1968" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/touristteddy/templates/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="13" selection-start="2811" selection-end="2811" vertical-scroll-proportion="0.5611511">
+        <state line="31" column="19" selection-start="1536" selection-end="1536" vertical-scroll-proportion="-19.375">
+          <folding>
+            <element signature="n#style#0;n#input#1;n#form#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/touristteddy/templates/base_generic.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="66" selection-start="1710" selection-end="1710" vertical-scroll-proportion="0.34532374">
           <folding />
         </state>
       </provider>
