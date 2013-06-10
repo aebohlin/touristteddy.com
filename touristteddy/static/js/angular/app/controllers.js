@@ -15,7 +15,7 @@ function PostsCtrl($scope, $http) {
         });
 
         $scope.comment = angular.copy(blankComment);
-
+        $scope.editing = false;
     };
 
     var blankComment = {

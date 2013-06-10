@@ -44,8 +44,8 @@ a:hover { text-decoration: underline;}
 
 }
 
-#newpost { display: none; padding: 10px; background-color: #fff;-webkit-box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5);
-    box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); margin-bottom: 20px;}
+#newPost { padding: 10px; background-color: #fff;-webkit-box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5);
+    box-shadow: 5px 5px 5px 0px rgba(12, 12, 12, 0.5); }
 
 .stop-scrolling {
     height: 100%;

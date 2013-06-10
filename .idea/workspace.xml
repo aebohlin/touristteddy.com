@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" name="Default" comment="angularjs folder structure">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/sqlite3.db" afterPath="$PROJECT_DIR$/touristteddy/sqlite3.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/templates/base_generic.html" afterPath="$PROJECT_DIR$/touristteddy/templates/base_generic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" afterPath="$PROJECT_DIR$/touristteddy/static/js/angular/app/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/templates/index.html" afterPath="$PROJECT_DIR$/touristteddy/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" afterPath="$PROJECT_DIR$/touristteddy/static/css/touristteddy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/touristteddy/utils.py" afterPath="$PROJECT_DIR$/touristteddy/touristteddy/utils.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/touristteddy/teddys/views.py" afterPath="$PROJECT_DIR$/touristteddy/teddys/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" name="Default" comment="angularjs folder structure" />
     <ignored path="touristteddy.com.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="5d4ab88e-061d-4b30-be55-e1bb6fd199eb" time="1370607714402" ignored="false" />
