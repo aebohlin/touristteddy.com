@@ -1,4 +1,4 @@
-//$(document).ready(function () {
+
 //    $('#try-1').click(function(e) {
 //        $('#sign_up').lightbox_me({
 //            centered: true,

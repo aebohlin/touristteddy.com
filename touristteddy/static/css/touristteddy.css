@@ -39,6 +39,8 @@ a:hover { text-decoration: underline;}
 .content { padding-bottom: 50px; }
 .login { margin-top: 20px;padding: 10px; }
 
+#map-canvas { height: 400px; width: 400px; }
+
 @media (max-width: 480px) {
 
 

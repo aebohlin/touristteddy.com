@@ -38,9 +38,35 @@
 		</div>
 
 		<div id="newPost" class="row" ng-show="editing" ng-cloak>
-	        <div class="span12">
-	            hej aldjkal dkj aldkj aldkja ld
+	        <div class="span4">
+	            <h2>add new post</h2>
+				<form class="form-1" action="/create_post/" method="post" enctype="multipart/form-data">{% csrf_token %}
+					<p class="field">
+						<input type="text" name="title" placeholder="Title" value="{{ title }}"/>
+					</p>
+					<p class="field">
+						<textarea name="description" placeholder="Description">{{ description }}</textarea>
+					</p>
+					<p class="field">
+						<input type="file" name="picture" placeholder="Picture" value="{{ picture }}"/>
+					</p>
+					<p class="field">
+						<input type="text" name="lat" placeholder="Latitude" value="{{ lat }}"/>
+					</p>
+					<p class="field">
+						<input type="text" name="lng" placeholder="Longitude" value="{{ lng }}"/>
+					</p>
+					<p class="field">
+						<input type="text" name="teddy_id" placeholder="Teddy" value="{{ teddy }}"/>
+					</p>
+					<p class="submit">
+						<button type="submit" name="submit">Add post</button>
+					</p>
+				</form>
 	        </div>
+	        <div class="span7">
+        		<div id="map-canvas"></div>
+        	</div>
 	    </div>
 		{% block content %}
 			<p>Welcome to touristteddy.com</p>
@@ -61,5 +87,19 @@
     <script type="text/javascript" src="{{ STATIC_URL }}js/angular/lib/angular.min.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/angular/app/app.js"></script>
     <script type="text/javascript" src="{{ STATIC_URL }}js/angular/app/controllers.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMzLpiW6MFNTXjnHC1WRyQM9iUvW4favw&sensor=false"></script>
+    <script type="text/javascript">
+		function initialize() {
+	        var mapOptions = {
+	          center: new google.maps.LatLng(-34.397, 150.644),
+	          zoom: 8,
+	          mapTypeId: google.maps.MapTypeId.ROADMAP
+	        };
+	        var map = new google.maps.Map(document.getElementById("map-canvas"),
+	            mapOptions);
+		}
+		google.maps.event.addDomListener(window, 'load', initialize);
+		//TODO: need to resize on show hide new post
+    </script>
 </body>
 </html>
