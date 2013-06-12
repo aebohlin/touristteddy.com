@@ -10,11 +10,13 @@
 
 function PostsCtrl($scope, $http) {
     $scope.init = function (url) {
-        $http.get(url).success(function (data) {
-            $scope.posts = data;
-        });
-
+        if(url != '') {
+            $http.get(url).success(function (data) {
+                $scope.posts = data;
+            });
+        }
         $scope.comment = angular.copy(blankComment);
+        $scope.post = angular.copy(blankPost);
         $scope.editing = false;
     };
 
@@ -24,6 +26,32 @@ function PostsCtrl($scope, $http) {
         postId: 0,
         csrfmiddlewaretoken: ""
     };
+
+
+    var blankPost = {
+        title: "",
+        description: "",
+        latitude: "",
+        longitude: "",
+        teddy_id: "",
+        csrfmiddlewaretoken: ""
+    };
+
+    $scope.loadMap = function () {
+        if($scope.editing) {
+            google.maps.event.trigger(map, "resize");
+            google.maps.event.addListener(map, 'click', function(event) {
+                placeMarker(event.latLng);
+            });
+        }
+        return $scope.editing;
+    };
+
+    $scope.addPost = function () {
+        $scope.latitude = lat;
+        $scope.longitude = lng;
+        
+    }
 
     $scope.initComment = function (post) {
         $scope.comment.post_id = post.id;
