@@ -50,7 +50,21 @@ function PostsCtrl($scope, $http) {
     $scope.addPost = function () {
         $scope.latitude = lat;
         $scope.longitude = lng;
-        
+        alert('tst');
+        $scope.csrfmiddlewaretoken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
+
+        var url = "/teddys/" + $scope.post.teddy_id + "/posts/add";
+        $http.post(url, $scope.post, {headers: {'X-CSRFTOKEN': $scope.csrfmiddlewaretoken}}).success(function (data) {
+            alert(data.title)
+            //post.comments.push(data);
+            // $scope.comment.comment = '';
+            // var $comments = $('#' + post.id + ' .comments');
+            // window.setTimeout(function() {
+            //     $comments.scrollTop($comments.prop("scrollHeight"));
+            // }, 1000);
+
+        });
+        return false;
     }
 
     $scope.initComment = function (post) {

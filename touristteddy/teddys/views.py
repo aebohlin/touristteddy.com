@@ -89,6 +89,56 @@ def post_comment(request, teddy_id, post_id):
     return HttpResponse(json.dumps(json_comment), mimetype='application/json')
 
 
+def add_post(request, teddy_id):
+    request_post = json.loads(request.body)
+    post = Post()
+
+    title = ''
+    description = ''
+    picture = ''
+    latitude = ''
+    longitude = ''
+    teddy_id = ''
+
+    if request.user.is_authenticated():
+        title = request_post['title']
+        description = request_post['description']
+        # picture = request.FILES['picture']
+        # picture_file = picture.read()
+        # medium_picture = ContentFile(utils.rescale(picture_file, int(700), int(650), False))
+        # small_picture = ContentFile(utils.rescale(picture_file, int(280), int(187), True))
+        # file_name = picture.name.split('.')[0]
+        # file_ending = picture.name.split('.')[1]
+        # medium_picture.name = '{0}_medium.{1}'.format(file_name, file_ending)
+        # small_picture.name = '{0}_small.{1}'.format(file_name, file_ending)
+        # utils.handle_uploaded_file(medium_picture)
+        # utils.handle_uploaded_file(small_picture)
+        latitude = request_post['latitude']
+        longitude = request_post['longitude']
+        teddy_id = request_post['teddy_id']
+        teddy = get_object_or_404(Teddy, pk=teddy_id)
+        post = Post(title=title,
+                    description=description,
+                    #picture=medium_picture,
+                    # small_picture=small_picture,
+                    latitude=latitude,
+                    longitude=longitude,
+                    teddy=teddy,
+                    user=request.user)
+        #post.save()
+
+    json_post = {
+        'title': post.title,
+        'description': post.description,
+        'latitude': post.latitude,
+        'longitude': post.longitude,
+        'teddy_id': post.teddy_id,
+        'user_name': post.user.username
+    }
+
+    return HttpResponse(json.dumps(json_post), mimetype='application/json')
+
+
 def create_post(request):
     title = ''
     description = ''
